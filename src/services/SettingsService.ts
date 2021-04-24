@@ -39,7 +39,6 @@ class SettingsService {
   }
 
   async update(username: string, chat: boolean) {
-    console.log('Valor que chegou do chat => ' + chat)
     await this.settingsRepository.createQueryBuilder()
       .update(Setting)
       .set({ chat })
